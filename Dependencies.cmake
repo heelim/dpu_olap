@@ -62,10 +62,11 @@ function(myproject_setup_dependencies)
           "-DCMAKE_INSTALL_LIBDIR=lib"
           "-DARROW_BUILD_STATIC=OFF"
           "-DCMAKE_BUILD_TYPE=Release"
+          "-DCMAKE_CXX_STANDARD=14"
           "-DARROW_WITH_RE2=OFF"
           "-DARROW_WITH_UTF8PROC=OFF"
           "-DARROW_COMPUTE=ON"
-          "-DARROW_TESTING=ON"
+          "-DARROW_TESTING=OFF"
           "-DARROW_JSON=ON"
           "-DCMAKE_POLICY_DEFAULT_CMP0135:STRING=NEW")
       add_library(arrow_shared SHARED IMPORTED)
